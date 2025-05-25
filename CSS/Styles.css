@@ -1,0 +1,344 @@
+/* Task 2: Add comments to label each section [cite: 6] */
+
+/* Universal selector to reset margin/padding [cite: 11] */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Good practice for box model [cite: 18] */
+}
+
+/* Body styles */
+/* Task 4: Add a background image to the body with fallback color [cite: 13] */
+/* The fallback color is defined in the inline style in index.html for demonstration */
+body {
+    font-family: Arial, sans-serif;
+    /* Background image and properties will be defined here for external stylesheet,
+       but kept inline for specific task requirements */
+    /* Example: background-image: url('path/to/your/image.jpg'); background-repeat: no-repeat; background-size: cover; */
+}
+
+/* Header styles [cite: 6] */
+/* Task 3: ID selector #mainHeader for the banner (applying to h1 for demonstration) [cite: 11] */
+/* Note: The h1 already has inline style. For external CSS, you'd remove the inline style. */
+/* Using an ID directly on the header tag from your HTML, if it had one. */
+/* For this exercise, we'll apply it to the h1 inside the header as an example based on "banner" */
+#mainHeader { /* Assuming your header had an ID, or apply to H1 for clarity */
+    /* background-color: #0056b3; - Already inline, move here if not inline */
+    /* color: white; - Already inline, move here if not inline */
+    /* padding: 15px; - Already inline, move here if not inline */
+    /* text-align: center; - Already inline, move here if not inline */
+}
+
+/* Navigation styles [cite: 6] */
+nav {
+    background-color: #4682b4;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #007bff;
+    border: 1px solid #0056b3;
+    margin-right: 10px;
+    display: inline-block; /* Keep horizontal layout by default */
+}
+
+/* Task 6: Style links with :link, :hover, :active, and :visited pseudo-classes [cite: 15] */
+nav a:link {
+    color: white;
+}
+
+nav a:visited {
+    color: #e0e0e0; /* Slightly different color for visited links */
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    text-decoration: underline;
+}
+
+nav a:active {
+    background-color: #003d80;
+    color: #ccc;
+}
+
+/* Task 6: Remove bullets from nav menus (already mostly handled by inline-block/text-decoration: none) [cite: 15] */
+/* If these were list items, you'd use: */
+/* nav ul { list-style-type: none; } */
+/* nav li { display: inline-block; } */
+
+/* Main content area styles [cite: 6] */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Section styles [cite: 6] */
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #eee;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Task 3: Element selector to style all <h2> [cite: 11] */
+h2 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Task 3: Grouping selector for h3, p to style together [cite: 12] */
+h3, p {
+    color: #333; /* Common color for h3 and p */
+    line-height: 1.5; /* Task 5: line-height on descriptions [cite: 14] (applied generally for paragraphs) */
+}
+
+h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Task 4: Apply gradients to section headers (h2 for example) using background: linear-gradient(...) [cite: 13] */
+section h2 {
+    background: linear-gradient(to right, #e0e0e0, #f9f9f9); /* Light grey gradient */
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: none; /* Remove previous border-bottom for gradient */
+}
+
+/* Welcome message styling */
+#home div {
+    background-color: #e0f0ff;
+    padding: 10px;
+    border: 1px solid #aaddff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Highlight class for visual emphasis [cite: 28] */
+.highlight {
+    font-weight: bold;
+    background-color: yellow;
+    padding: 2px 5px;
+}
+
+
+/* Event list container styling */
+.event-list {
+    text-align: center;
+    display: block;
+}
+
+/* Task 3: Class selector .eventCard for event containers [cite: 12] */
+/* Task 8: Add border, padding, and margin to .eventCard [cite: 19] */
+.eventCard {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin: 15px; /* Margin [cite: 19] */
+    border: 2px solid #007BFF; /* Border [cite: 19] - using a HEX color [cite: 13] */
+    padding: 10px; /* Padding [cite: 19] */
+    background-color: rgba(240, 240, 240, 0.9); /* Background color with RGBA [cite: 13] */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.event-item h5 {
+    margin: 0 0 5px 0;
+    color: #555;
+    text-align: center;
+}
+
+.event-item img {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.event-item p {
+    font-size: 0.9em;
+    margin: 5px 0 0 0;
+    color: #666;
+    text-align: center;
+    text-transform: capitalize; /* Task 5: text-transform [cite: 14] */
+    letter-spacing: 0.5px; /* Task 5: letter-spacing [cite: 14] */
+}
+
+/* Form styling [cite: 6] */
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+form fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+form legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Task 8: Add outline to highlight selected fields in a form [cite: 19] */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+form button,
+form input[type="submit"] {
+    padding: 12px 25px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: #666;
+}
+
+/* Video styling [cite: 6] */
+video {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Address styling [cite: 6] */
+address {
+    font-style: normal;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+address a {
+    color: #000080;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* Task 9: Multiple Columns in Text [cite: 20] */
+.news-article {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    column-count: 2; /* [cite: 20] */
+    column-gap: 30px; /* [cite: 20] */
+    column-rule: 1px solid gray; /* [cite: 20] */
+}
+
+.news-article h3 {
+    column-span: all; /* Make the heading span all columns */
+    text-align: center;
+}
+
+/* Footer styles [cite: 6] */
+footer {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Task 10: Responsive Web Design with Media Queries [cite: 21] */
+/* Add a media query for screens smaller than 768px [cite: 22] */
+@media screen and (max-width: 768px) {
+    /* Stack navigation links vertically instead of horizontally [cite: 22] */
+    nav a {
+        display: block;
+        margin: 10px auto; /* Center stacked links */
+        width: 80%; /* Make them take more width when stacked */
+    }
+
+    /* Reduce image sizes and font sizes [cite: 22] */
+    .eventCard {
+        width: 90%; /* Make event cards stack and take more width */
+        margin: 15px auto; /* Center them when stacked */
+    }
+
+    .event-item img {
+        max-width: 80%; /* Reduce image size within cards */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce font size for smaller screens */
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+
+    /* Task 9: Multi-column layout might not be suitable on small screens */
+    .news-article {
+        column-count: 1; /* Make it a single column on small screens */
+        column-gap: 0;
+        column-rule: none;
+    }
+}
