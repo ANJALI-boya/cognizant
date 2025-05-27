@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesssss.css">
+    <style>
+        body {
+            background-color: #f4f4f4; /* Fallback color for background image */
+            background-image: url('https://via.placeholder.com/1x1.png?text=+'); /* Placeholder for a background image */
+            background-repeat: repeat;
+            background-size: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <h1 class="m-0 fs-2 text-white">Local Community Events Portal</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#events">Events</a>
+                    <a class="nav-link" href="#registration">Registration</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="help.html" target="_blank">Help Document</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="mainContent" class="container my-4">
+        <section id="home" class="mb-4 p-4">
+            <h2>Welcome to Our Community Portal!</h2>
+            <div>
+                <p>Hello, logged-in user! Welcome back. Don't miss our <span style="color: red; font-weight: bold;">special offer</span> for new registrations!</p>
+            </div>
+            <p>Explore upcoming events and services in our community. We aim to connect residents with local happenings and essential resources. This is a <span class="highlight">key resource</span> for all community members.</p>
+        </section>
+
+        <section id="events" class="mb-4 p-4">
+            <h2 class="text-dark border-bottom pb-2">Upcoming Events</h2>
+            <h3>Past Event Highlights</h3>
+
+            <div class="text-center mt-2">
+                <h4 class="text-dark">Explore Our Past Events!</h4>
+            </div>
+
+            <div class="event-list row g-4">
+                <div class="event-item eventCard col-md-6 col-lg-4">
+                    <h5>Community Fair</h5>
+                    <img src="https://stories.uwcsea.edu.sg/community-fair-2023/assets/gdPiwSkGvB/2023_02_dover_community-fair-6-2048x1364.jpg" alt="Community Fair" title="Annual Community Fair" class="img-fluid">
+                </div>
+
+                <div class="event-item eventCard col-md-6 col-lg-4">
+                    <h5>Music Concert</h5>
+                    <img src="https://t3.ftcdn.net/jpg/02/21/36/48/360_F_221364834_GsaULQoVVobdJBHCrGHq3SFeO4FMzO66.jpg" alt="Music Concert" title="Summer Music Concert" class="img-fluid">
+                </div>
+
+                <div class="event-item eventCard col-md-6 col-lg-4">
+                    <h5>Art Workshop</h5>
+                    <img src="https://www.shutterstock.com/image-photo/art-wine-celebration-friends-painting-600nw-2341133585.jpg" alt="Art Workshop" title="Creative Art Workshop" class="img-fluid">
+                </div>
+
+                <div class="event-item eventCard col-md-6 col-lg-4">
+                    <h5>Sports Day</h5>
+                    <img src="https://thumbs.dreamstime.com/b/celebration-qatar-national-sport-day-doha-qatar-february-local-people-enjoy-basketball-event-organized-celebration-259593290.jpg" alt="Sports Day" title="Annual Sports Day" class="img-fluid">
+                </div>
+
+                <div class="event-item eventCard col-md-6 col-lg-4">
+                    <h5>Food Festival</h5>
+                    <img src="https://curlytales.com/wp-content/uploads/2019/11/shekaan.jpg" alt="Food Festival" title="Local Food Festival" class="img-fluid">
+                </div>
+
+                <div class="event-item eventCard col-md-6 col-lg-4">
+                    <h5>Book Club</h5>
+                    <img src="https://images.squarespace-cdn.com/content/v1/60b8aeb15c8bd718aedb3924/7809c937-0d6d-491d-9657-dc916f282301/daniel-zjV8ptYgcEo-unsplash.jpg" alt="Book Club Meeting" title="Community Book Club" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section id="registration" class="mb-4 p-4">
+            <h2>Event Registration Form</h2>
+            <p>Please fill out the form below to register for our events.</p>
+
+            <form id="registrationForm" class="needs-validation" novalidate>
+                <fieldset class="mb-4 p-3">
+                    <legend>Your Details</legend>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="e.g., John Doe" required autofocus>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="e.g., john.doe@example.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number (Optional):</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="e.g., 123-456-7890">
+                        <span id="phoneError" class="text-danger"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-4 p-3">
+                    <legend>Event Selection</legend>
+                    <div class="mb-3">
+                        <label for="eventDate" class="form-label">Preferred Event Date:</label>
+                        <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="eventType" class="form-label">Choose Event Type:</label>
+                        <select class="form-select" id="eventType" name="eventType" required>
+                            <option value="">-- Select an Event Type --</option>
+                            <option value="Community Fair">Community Fair</option>
+                            <option value="Music Concert">Music Concert</option>
+                            <option value="Art Workshop">Art Workshop</option>
+                            <option value="Sports Day">Sports Day</option>
+                            <option value="Food Festival">Food Festival</option>
+                            <option value="Other">Other (specify in message)</option>
+                        </select>
+                    </div>
+                    <p>Estimated Event Fee: <span id="eventFee">(Varies)</span></p>
+                </fieldset>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Special Requests/Comments:</label>
+                    <textarea class="form-control" id="message" name="message" rows="6" placeholder="Any specific requests or comments about your registration..."></textarea>
+                    <p>Characters remaining: <span id="charsRemaining">500</span></p>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Registration</button>
+                <output for="name email eventDate eventType message" id="registrationOutput" class="d-block mt-3"></output>
+            </form>
+
+            <h3 class="mt-4">Event Promo Video</h3>
+            <div class="ratio ratio-16x9">
+                <video controls>
+                    <source src="https://cdn.pixabay.com/video/2020/03/31/34685-403408160_large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-4 p-4">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us using the details below:</p>
+
+            <address class="mt-3 p-3 bg-light border-start border-primary border-5">
+                <strong>Email:</strong> <a href="mailto:info@communityportal.org">info@communityportal.org</a><br>
+                <strong>Phone:</strong> (123) 456-7890<br>
+                <strong>Address:</strong> 123 Community Lane, Cityville, State, 12345
+            </address>
+
+            <h3 class="mt-4">User Preferences</h3>
+            <div class="mb-3">
+                <label for="preferredEventType" class="form-label">Preferred Event Type:</label>
+                <select class="form-select" id="preferredEventType">
+                    <option value="">None</option>
+                    <option value="Community Fair">Community Fair</option>
+                    <option value="Music Concert">Music Concert</option>
+                    <option value="Art Workshop">Art Workshop</option>
+                    <option value="Sports Day">Sports Day</option>
+                    <option value="Food Festival">Food Festival</option>
+                </select>
+            </div>
+            <button id="clearPreferencesBtn" class="btn btn-outline-secondary">Clear Preferences</button>
+        </section>
+
+        <section id="geolocation" class="mb-4 p-4 text-center">
+            <h2>Find Nearby Events</h2>
+            <button id="findNearbyEventsButton" class="btn btn-success">Find Nearby Events</button>
+            <div id="location-info" class="mt-3">
+                <p>Your current location: <span id="latitude">N/A</span>, <span id="longitude">N/A</span></p>
+                <p id="geo-status"></p>
+            </div>
+        </section>
+
+        <div class="news-article p-4 mb-4">
+            <h3>Community Bulletin</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Nunc vel risus commodo, finibus ex eu, tincidunt odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum, purus eget finibus tincidunt, nulla ex eleifend libero, sit amet posuere leo felis ut lacus. Proin in libero a libero dignissim volutpat vel sit amet elit. Sed nec erat in urna elementum consectetur.</p>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <p class="m-0 text-center">&copy; 2025 Local Community Event Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scriptttttt.js"></script>
+</body>
+</html>
