@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="stylesssss.css">
+    <style>
+        body {
+            background-color: #f4f4f4; /* Fallback color for background image */
+            background-image: url('https://via.placeholder.com/1x1.png?text=+'); /* Placeholder for a background image */
+            background-repeat: repeat;
+            background-size: auto;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #0056b3; color: white; padding: 15px; text-align: center;">
+        <h1 style="margin: 0; font-size: 2em; color: white;">Local Community Events Portal</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#registration">Registration</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help Document</a>
+    </nav>
+
+    <main id="mainContent">
+        <section id="home">
+            <h2>Welcome to Our Community Portal!</h2>
+            <div>
+                <p>Hello, logged-in user! Welcome back. Don't miss our <span style="color: red; font-weight: bold;">special offer</span> for new registrations!</p>
+            </div>
+            <p>Explore upcoming events and services in our community. We aim to connect residents with local happenings and essential resources. This is a <span class="highlight">key resource</span> for all community members.</p>
+        </section>
+
+
+        <section id="events">
+            <h2 style="color: #333; border-bottom: 1px solid #ccc; padding-bottom: 10px;">Upcoming Events</h2>
+            <h3>Past Event Highlights</h3>
+
+             <div style="text-align: center; margin-top: 10px;">
+                <h4 style="color: #444;">Explore Our Past Events!</h4>
+            </div>
+
+            <div class="event-list">
+    
+                <div class="event-item eventCard"> <h5>Community Fair</h5>
+                    <img src="https://stories.uwcsea.edu.sg/community-fair-2023/assets/gdPiwSkGvB/2023_02_dover_community-fair-6-2048x1364.jpg" alt="Community Fair" title="Annual Community Fair">
+                    <!--<p>A lively annual gathering.</p>-->
+                </div>
+
+                <div class="event-item eventCard"> <h5>Music Concert</h5>
+                    <img src="https://t3.ftcdn.net/jpg/02/21/36/48/360_F_221364834_GsaULQoVVobdJBHCrGHq3SFeO4FMzO66.jpg" alt="Music Concert" title="Summer Music Concert">
+                    <!--<p>Outdoor summer tunes.</p>-->
+                </div>
+
+                <div class="event-item eventCard"> <h5>Art Workshop</h5>
+                    <img src="https://www.shutterstock.com/image-photo/art-wine-celebration-friends-painting-600nw-2341133585.jpg" alt="Art Workshop" title="Creative Art Workshop">
+                    <!--<p>Unleash your creativity.</p>-->
+                </div>
+
+                <div class="event-item eventCard"> <h5>Sports Day</h5>
+                    <img src="https://thumbs.dreamstime.com/b/celebration-qatar-national-sport-day-doha-qatar-february-local-people-enjoy-basketball-event-organized-celebration-259593290.jpg" alt="Sports Day" title="Annual Sports Day">
+                    <!--<p>Fitness and fun.</p>-->
+                </div>
+
+                <div class="event-item eventCard"> <h5>Food Festival</h5>
+                    <img src="https://curlytales.com/wp-content/uploads/2019/11/shekaan.jpg" alt="Food Festival" title="Local Food Festival">
+                    <!--<p>Taste local delights.</p>-->
+                </div>
+
+                <div class="event-item eventCard"> <h5>Book Club</h5>
+                    <img src="https://images.squarespace-cdn.com/content/v1/60b8aeb15c8bd718aedb3924/7809c937-0d6d-491d-9657-dc916f282301/daniel-zjV8ptYgcEo-unsplash.jpg" alt="Book Club Meeting" title="Community Book Club">
+                    <!--<p>Discussions and reads.</p>-->
+                </div>
+            </div>
+        </section>
+
+        <section id="registration">
+            <h2>Event Registration Form</h2>
+            <p>Please fill out the form below to register for our events.</p>
+
+            <form id="registrationForm">
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., John Doe" required autofocus><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required><br>
+
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="text" id="phone" name="phone" placeholder="e.g., 123-456-7890"><br>
+                    <span id="phoneError" style="color: red;"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event Selection</legend>
+                    <label for="eventDate">Preferred Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required><br>
+
+                    <label for="eventType">Choose Event Type:</label>
+                    <select id="eventType" name="eventType" required>
+                        <option value="">-- Select an Event Type --</option>
+                        <option value="Community Fair">Community Fair</option>
+                        <option value="Music Concert">Music Concert</option>
+                        <option value="Art Workshop">Art Workshop</option>
+                        <option value="Sports Day">Sports Day</option>
+                        <option value="Food Festival">Food Festival</option>
+                        <option value="Other">Other (specify in message)</option>
+                    </select><br>
+                    <p>Estimated Event Fee: <span id="eventFee">(Varies)</span></p>
+                </fieldset>
+
+                <label for="message">Special Requests/Comments:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Any specific requests or comments about your registration..."></textarea><br>
+                <p>Characters remaining: <span id="charsRemaining">500</span></p><br>
+
+                <input type="submit" value="Submit Registration">
+                <output for="name email eventDate eventType message" id="registrationOutput"></output>
+            </form>
+
+            <h3>Event Promo Video</h3>
+            <video controls width="600" height="340">
+                <source src="https://cdn.pixabay.com/video/2020/03/31/34685-403408160_large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p></p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us using the details below:</p>
+
+            <address>
+                <strong>Email:</strong> <a href="mailto:info@communityportal.org">info@communityportal.org</a><br>
+                <strong>Phone:</strong> (123) 456-7890<br>
+                <strong>Address:</strong> 123 Community Lane, Cityville, State, 12345
+            </address>
+
+            <h3>User Preferences</h3>
+            <label for="preferredEventType">Preferred Event Type:</label><br>
+            <select id="preferredEventType">
+                <option value="">None</option>
+                <option value="Community Fair">Community Fair</option>
+                <option value="Music Concert">Music Concert</option>
+                <option value="Art Workshop">Art Workshop</option>
+                <option value="Sports Day">Sports Day</option>
+                <option value="Food Festival">Food Festival</option>
+            </select><br>
+            <button id="clearPreferencesBtn">Clear Preferences</button>
+        </section>
+        <section id="geolocation">
+            <h2>Find Nearby Events</h2>
+            <button id="findNearbyEventsButton" class="nearby-events-button">Find Nearby Events</button>
+            <div id="location-info">
+                <p>Your current location: <span id="latitude">N/A</span>, <span id="longitude">N/A</span></p>
+                <p id="geo-status"></p>
+            </div>
+        </section>
+
+        <div class="news-article">
+            <h3>Community Bulletin</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Nunc vel risus commodo, finibus ex eu, tincidunt odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum, purus eget finibus tincidunt, nulla ex eleifend libero, sit amet posuere leo felis ut lacus. Proin in libero a libero dignissim volutpat vel sit amet elit. Sed nec erat in urna elementum consectetur.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Local Community Event Portal. All rights reserved.</p>
+    </footer>
+    <script src="scriptttttt.js"></script>
+</body>
+</html>
